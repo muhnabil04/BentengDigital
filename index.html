@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+<header class="flex items-center justify-between px-6 py-3 md:py-4 shadow max-w-5xl rounded-full mx-auto w-full bg-white">
+    <!-- Logo Here -->
+    <a href="#">
+        <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/dummyLogo/prebuiltuiDummyLogo.svg" />
+    </a>
+
+    <nav id="menu" class="max-md:fixed max-md:top-0 max-md:left-0 max-md:h-full max-md:w-0 max-md:overflow-hidden 
+    transition-all duration-300 bg-white/80 backdrop-blur-md 
+    flex flex-col md:flex-row items-center justify-center gap-8 
+    text-gray-900 text-sm font-normal z-50">
+
+    <!-- Tombol Close untuk Mobile -->
+    <button id="closeMenu" class="absolute top-4 right-6 md:hidden text-gray-600">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 18L18 6M6 6l12 12" />
+        </svg>
+    </button>
+
+    <!-- Bagian link yang ditampilkan di semua device -->
+    <div class="flex flex-col md:flex-row items-center gap-6 ml-0 md:ml-7">
+        <a href="#" class="relative overflow-hidden h-6 group">
+            <span class="block group-hover:-translate-y-full transition-transform duration-300">Products</span>
+            <span class="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">Products</span>
+        </a>
+        <a href="#" class="relative overflow-hidden h-6 group">
+            <span class="block group-hover:-translate-y-full transition-transform duration-300">Stories</span>
+            <span class="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">Stories</span>
+        </a>
+        <a href="#" class="relative overflow-hidden h-6 group">
+            <span class="block group-hover:-translate-y-full transition-transform duration-300">Pricing</span>
+            <span class="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">Pricing</span>
+        </a>
+        <a href="#" class="relative overflow-hidden h-6 group">
+            <span class="block group-hover:-translate-y-full transition-transform duration-300">Docs</span>
+            <span class="block absolute top-full left-0 group-hover:translate-y-[-100%] transition-transform duration-300">Docs</span>
+        </a>
+    </div>
+</nav>
+
+
+    <div class="flex items-center space-x-4">
+        <button id="openMenu" class="md:hidden text-gray-600">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+</header>
+
+<!-- Navbar Animation -->
+<script src="nav.js"></script>
+    
+    <h1 class="text-3xl flex justify-center mt-10 bg-red-100">
+        Hello world!
+    </h1>
+</body>
+</html>
