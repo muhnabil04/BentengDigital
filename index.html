@@ -10,27 +10,28 @@
 <body style="background-color: #fbfbfb;">
 
 <header id="navbar"
-class="fixed top-0 left-0 w-full duration-1000 z-[100] backdrop-blur-md shadow-md md:px-6 px-4 py-6 flex items-center justify-between">
+class="fixed top-0 left-0 w-full z-[100] backdrop-blur-md shadow-md md:px-6 px-4 py-6 flex items-center justify-between">
 
   <!-- Logo -->
-  <a href="#" class="flex items-center gap-2 ml-5">
-    <img src="assets/logo.png" class="w-10 md:w-12 h-auto opacity-80" alt="Logo">
-    <span class="font-bold text-2xl text-blue-500">PoliceTube</span>
-  </a>
+<a href="#" class="flex items-center gap-2 ml-3">
+  <img src="assets/logo.png" class="w-10 md:w-12 h-auto opacity-80" alt="Logo">
+  <span class="font-bold text-sm text-blue-500 sm:text-2xl">PoliceTube</span>
+</a>
+
 
   <!-- Desktop menu -->
-  <nav id="lg-menu" class="hidden md:flex items-center gap-8 text-gray-100 text-lg font-normal mr-5">
+  <nav id="lg-menu" class="hidden md:flex items-center gap-8 text-gray-100 font-normal mr-5">
     <a href="#" class="relative overflow-hidden h-6 group">
         <span class="font-semibold block group-hover:-translate-y-full transition-transform duration-300">About us</span>
-        <span class="font-semibold block absolute top-full left-0 group-hover:translate-y-[-120%] transition-transform duration-300">About us</span>
+        <span class="font-semibold block absolute top-full left-0 group-hover:translate-y-[-105%] transition-transform duration-300">About us</span>
       </a>
       <a href="#" class="relative overflow-hidden h-6 group">
         <span class="font-semibold block group-hover:-translate-y-full transition-transform duration-300">Course</span>
-        <span class="font-semibold block absolute top-full left-0 group-hover:translate-y-[-120%] transition-transform duration-300">Course</span>
+        <span class="font-semibold block absolute top-full left-0 group-hover:translate-y-[-105%] transition-transform duration-300">Course</span>
       </a>
       <a href="#" class="relative overflow-hidden h-6 group">
         <span class="font-semibold block group-hover:-translate-y-full transition-transform duration-300">Contact</span>
-        <span class="font-semibold block absolute top-full left-0 group-hover:translate-y-[-120%] transition-transform duration-300">Contact</span>
+        <span class="font-semibold block absolute top-full left-0 group-hover:translate-y-[-105%] transition-transform duration-300">Contact</span>
       </a>
   </nav>
 
@@ -63,15 +64,15 @@ class="fixed top-0 left-0 w-full duration-1000 z-[100] backdrop-blur-md shadow-m
 </nav>
 
 
-<!-- ✅ Hero Section with background -->
+<!-- Landing page background -->
 <div class="relative">
-  <div class="bg-fixed bg-cover h-[99vh] brightness-35" 
+  <div class="bg-cover lg:h-[100vh] md:h-[70vh] sm:h-[65vh] h-[60vh] brightness-35" 
       style="background-image: url('assets/standard-quality-control-collage-concept.webp')"></div>
   <div class="absolute top-1/3 left-1/2 -translate-x-1/2 block w-full px-4">
     <h1 class="text-6xl font-extrabold text-gray-100 text-center max-md:text-4xl mt-8">
-        Platform edukasi keamanan digital.
+        Platform Edukasi Keamanan Digital.
     </h1>
-    <p class="text-lg text-gray-100 text-center max-md:text-lg mt-12 max-sm:mt-5 max-sm:text-base">
+    <p class="text-lg text-gray-200 text-center max-md:text-lg mt-12 max-sm:mt-5 max-sm:text-base">
       Membentengi Generasi Digital dari Ancaman Siber.
     </p>
   </div>
@@ -100,11 +101,25 @@ class="fixed top-0 left-0 w-full duration-1000 z-[100] backdrop-blur-md shadow-m
   </div>
 </section>
 
+
+<section class="flex flex-col justify-center bg-red-500 h-[70vh]">
+  <div class="flex mx-auto">
+    <div class="bg-yellow-100 flex-col justify-center w-1/2">
+      <h1 class="text-blue-500 text-3xl font-bold">Visi</h1>
+      <p>Meningkatkan literasi keamanan digital di kalangan masyarakat agar mampu melindungi diri dari ancaman siber dan berkontribusi positif dalam ruang digital.</p>
+    </div>
+    <div class="bg-blue-800 flex w-1/2">
+      <img src="" alt="image">
+    </div>
+  </div>
+  <div class="text-center">
+    <p class="text-4xl font-semibold">Kami percaya keamanan digital dimulai dari kesadaran.</p>
+  </div>
+</section>
+
 <div style="height: 100vh;"></div>
 
-
-<!-- Navbar Animation -->
-<script src="animation/nav.js"></script>
-    
+  <!-- Navbar Animation -->
+  <script src="animation/nav.js"></script>
 </body>
 </html>
