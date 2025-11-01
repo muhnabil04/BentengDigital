@@ -2,12 +2,14 @@ const openMenu = document.getElementById("openMenu");
 const closeMenu = document.getElementById("closeMenu");
 const menu = document.getElementById("menu");
 
+// Buka menu mobile
 openMenu.addEventListener("click", () => {
-    menu.classList.remove("max-md:w-0");
-    menu.classList.add("max-md:w-full");
+    menu.classList.remove("w-0", "overflow-hidden");
+    menu.classList.add("w-full");
 });
 
+// Tutup menu mobile
 closeMenu.addEventListener("click", () => {
-    menu.classList.remove("max-md:w-full");
-    menu.classList.add("max-md:w-0");
+    menu.classList.remove("w-full");
+    menu.classList.add("w-0", "overflow-hidden");
 });
