@@ -1,6 +1,8 @@
 const openMenu = document.getElementById("openMenu");
 const closeMenu = document.getElementById("closeMenu");
 const menu = document.getElementById("menu");
+const lgMenu = document.getElementById("lg-menu");
+const navbar = document.getElementById("navbar");
 
 // Buka menu mobile
 openMenu.addEventListener("click", () => {
@@ -13,3 +15,43 @@ closeMenu.addEventListener("click", () => {
     menu.classList.remove("w-full");
     menu.classList.add("w-0", "overflow-hidden");
 });
+
+
+window.addEventListener("scroll", () => {
+if (window.scrollY > 15) {
+    // Ketika discroll → tampilkan navbar kecil & rounded
+    navbar.classList.add(
+    "top-1",
+    "left-1/2",
+    "-translate-x-1/2",
+    "max-w-5xl",
+    "w-[90%]",
+    "md:w-[85%]",
+    "rounded-full",
+    "shadow-lg",
+    "bg-white/80",
+    "py-3"
+    );
+    navbar.classList.remove("w-full", "left-0", "translate-x-0", "rounded-none", "py-6");
+    lgMenu.classList.remove("text-gray-100");
+    lgMenu.classList.add("text-gray-700");
+} else {
+    // Saat di posisi paling atas → lebar penuh, tanpa rounded
+    navbar.classList.remove(
+        "top-1",
+        "left-1/2",
+        "-translate-x-1/2",
+        "max-w-5xl",
+        "w-[90%]",
+        "md:w-[85%]",
+        "rounded-full",
+        "shadow-lg",
+        "bg-white/80"
+    );
+    navbar.classList.add("w-full", "left-0", "translate-x-0", "rounded-none","py-6", "text-gray-90");
+    
+    lgMenu.classList.remove("text-gray-700");
+    lgMenu.classList.add("text-gray-100");
+}
+});
+
