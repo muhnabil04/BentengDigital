@@ -83,3 +83,48 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
+
+// Breach section
+  const form = document.getElementById("breachForm");
+  const result = document.getElementById("result");
+  const loading = document.getElementById("loading");
+  const output = document.getElementById("output");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const value = document.getElementById("userInput").value.trim();
+
+    if (value === "") return;
+
+    result.classList.remove("hidden");
+    loading.classList.remove("hidden");
+    output.classList.add("hidden");
+    output.innerHTML = "";
+
+    // Simulasi cek data breach
+    setTimeout(() => {
+      loading.classList.add("hidden");
+      output.classList.remove("hidden");
+
+      // Random hasil simulasi
+      const breached = Math.random() < 0.4; // 40% kemungkinan data bocor
+
+      if (breached) {
+        output.innerHTML = `
+          <div class="bg-red-50 border border-red-300 text-red-700 rounded-xl p-6">
+            <h3 class="text-2xl font-bold mb-2">⚠️ Data Anda Ditemukan!</h3>
+            <p class="mb-3">Alamat <span class="font-semibold">${value}</span> pernah terlibat dalam kebocoran data publik.</p>
+            <p class="text-sm text-gray-600">Segera ubah kata sandi Anda dan aktifkan verifikasi dua langkah (2FA) untuk keamanan tambahan.</p>
+          </div>
+        `;
+      } else {
+        output.innerHTML = `
+          <div class="bg-green-50 border border-green-300 text-green-700 rounded-xl p-6">
+            <h3 class="text-2xl font-bold mb-2">✅ Aman!</h3>
+            <p>Tidak ditemukan indikasi kebocoran untuk <span class="font-semibold">${value}</span>.</p>
+            <p class="text-sm text-gray-600 mt-2">Tetap waspada dan hindari mengklik tautan mencurigakan.</p>
+          </div>
+        `;
+      }
+    }, 1500);
+  });
