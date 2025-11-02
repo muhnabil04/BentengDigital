@@ -55,3 +55,31 @@ if (window.scrollY > 15) {
 }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+    const counter = document.getElementById("counter");
+    let count = 0;
+    const target = 1000; // nilai akhir
+    const speed = 10; // semakin kecil semakin cepat
+
+    const updateCount = () => {
+      if (count < target) {
+        count += Math.ceil(target / 100);
+        counter.textContent = count.toLocaleString();
+        setTimeout(updateCount, speed);
+      } else {
+        counter.textContent = target.toLocaleString();
+      }
+    };
+
+    updateCount();
+  });
+
+    document.querySelectorAll(".accordion-item").forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (item.open) {
+          document.querySelectorAll(".accordion-item").forEach((other) => {
+            if (other !== item) other.removeAttribute("open");
+          });
+        }
+      });
+    });
