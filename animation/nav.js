@@ -4,6 +4,18 @@ const menu = document.getElementById("menu");
 const lgMenu = document.getElementById("lg-menu");
 const navbar = document.getElementById("navbar");
 
+   window.addEventListener('load', () => {
+      const loadingScreen = document.getElementById('loading-screen');
+      
+    
+      loadingScreen.classList.add('opacity-0');
+      
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+        document.body.classList.remove('no-scroll'); 
+      }, 700); 
+    });
+
 // Buka menu mobile
 openMenu.addEventListener("click", () => {
     menu.classList.remove("w-0", "overflow-hidden");
