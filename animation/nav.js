@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-//contact
+//animasi content
 const reveals = document.querySelectorAll(".reveal");
 const observer = new IntersectionObserver(
   (entries) => {
@@ -97,5 +97,13 @@ const observer = new IntersectionObserver(
   },
   { threshold: 0.15 }
 );
-
 reveals.forEach((el) => observer.observe(el));
+
+
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loadingScreen");
+  loader.classList.add("opacity-0"); // efek fade out
+  setTimeout(() => {
+    loader.style.display = "none"; // sembunyikan sepenuhnya
+  }, 700); // durasi fade-out sesuai dengan transition di Tailwind
+});
