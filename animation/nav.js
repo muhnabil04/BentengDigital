@@ -55,34 +55,16 @@ if (window.scrollY > 15) {
 }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const counter = document.getElementById("counter");
-    let count = 0;
-    const target = 1000; // nilai akhir
-    const speed = 10; // semakin kecil semakin cepat
-
-    const updateCount = () => {
-      if (count < target) {
-        count += Math.ceil(target / 100);
-        counter.textContent = count.toLocaleString();
-        setTimeout(updateCount, speed);
-      } else {
-        counter.textContent = target.toLocaleString();
-      }
-    };
-
-    updateCount();
-  });
-
-    document.querySelectorAll(".accordion-item").forEach((item) => {
-      item.addEventListener("toggle", () => {
-        if (item.open) {
-          document.querySelectorAll(".accordion-item").forEach((other) => {
-            if (other !== item) other.removeAttribute("open");
-          });
-        }
+//accordion
+document.querySelectorAll(".accordion-item").forEach((item) => {
+  item.addEventListener("toggle", () => {
+    if (item.open) {
+      document.querySelectorAll(".accordion-item").forEach((other) => {
+        if (other !== item) other.removeAttribute("open");
       });
-    });
+    }
+  });
+});
 
 //animasi content
 const reveals = document.querySelectorAll(".reveal");
@@ -110,10 +92,12 @@ window.addEventListener("load", () => {
     }, 300);
   });
 
+
+//ojk counter
 document.addEventListener("DOMContentLoaded", () => {
   const counter = document.getElementById("counter");
   let count = 0;
-  const target = 1000; // nilai akhir
+  const target = 700; // nilai akhir
   const speed = 10; // semakin kecil semakin cepat
   let started = false; // agar animasi hanya jalan sekali
 
