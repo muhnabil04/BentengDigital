@@ -80,18 +80,14 @@ const observer = new IntersectionObserver(
 reveals.forEach((el) => observer.observe(el));
 
 
-document.body.classList.add("no-scroll");
 
-window.addEventListener("load", () => {
-  const loadingScreen = document.getElementById("loading-screen");
-
-  // Fade-out
-  loadingScreen.style.opacity = "0";
+window.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("loading-screen");
 
   setTimeout(() => {
-    loadingScreen.style.display = "none";
-    document.body.classList.remove("no-scroll"); // aktifkan scrolling
-  }, 700); 
+    loader.style.opacity = "0";
+    setTimeout(() => loader.style.display = "none", 500);
+  }, 300); 
 });
 
 
